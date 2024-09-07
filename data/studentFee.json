@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "fee_id": 2,
+        "paid_amount": 6000000,
+        "completed_status": 1,
+        "deleted": 0
+    },
+    {
+        "id": 2,
+        "user_id": 2,
+        "fee_id": 2,
+        "paid_amount": 3000000,
+        "completed_status": 0,
+        "deleted": 0
+    },
+    {
+        "id": 3,
+        "user_id": 4,
+        "fee_id": 2,
+        "paid_amount": 3000000,
+        "completed_status": 1,
+        "deleted": 0
+    }
+]

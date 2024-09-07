@@ -1,0 +1,1 @@
+[{"id":1,"name":"Học phí kì 1","amount_to_pay":3000000,"total_sessions":3,"payment_deadline":"2024-07-30","deleted":0},{"id":2,"name":"Học phí kì 2","amount_to_pay":8000000,"total_sessions":4,"payment_deadline":"2024-09-04","deleted":0},{"id":3,"name":"tiền quỹ","amount_to_pay":2000000,"total_sessions":2,"payment_deadline":"2024-09-05","deleted":0}]

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+   
+    <link href="../../assets/img/favicon.png" rel="icon">
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="../../assets/img/logo.png" alt="">
+                <span class="d-none d-lg-block">MINI PROJECT</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div>
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link nav-icon search-bar-toggle " href="#">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+        <ul class="sidebar-nav" id="sidebar-nav">
+            <li class="nav-item">
+                <a class="nav-link " href="http://127.0.0.1:5500/pages/student/index.html">
+                    <span>Quản lý đóng học</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse"
+                    href="http://127.0.0.1:5500/pages/fee/index.html">
+                    <span>Cấu hình học phí</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <main id="main" class="main">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Thêm khoản phí mới</h5>
+                <form>
+                    <div class="form-group row margin-form">
+                        <label class="col-3 col-form-label">Tên khoản phí <span class="text-danger">*</span></label>
+                        <div class="col-9">
+                            <input class="form-control" id="fee-name" name="fee-name" type="text" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row margin-form">
+                        <label class="col-3 col-form-label">Tổng số tiền phải đóng <span
+                                class="text-danger">*</span></label>
+                        <div class="col-9">
+                            <input class="form-control" id="amount-to-pay" name="amount-to-pay" type="number" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row margin-form">
+                        <label class="col-3 col-form-label">Số đợt đóng <span class="text-danger">*</span></label>
+                        <div class="col-9">
+                            <input class="form-control" id="total-sessions" name="total-sessions" type="number"
+                                value="" />
+                        </div>
+                    </div>
+                    <button type="button" id="render-session" class="btn btn-warning margin-form">Render đợt
+                        đóng</button>
+                </form>
+
+                <div id="session-fee-form">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <script type="module">
+        import { saveFee, renderSession } from '../../assets/js/fee/insert.js';
+        document.addEventListener('DOMContentLoaded', function () {
+            const saveButton = document.querySelector('.btn.btn-primary.margin-form');
+            console.log(saveButton);
+            
+            if (saveButton) {
+                saveButton.onclick = saveFee;
+            }
+        });
+        document.getElementById('render-session').onclick = renderSession;
+    </script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>

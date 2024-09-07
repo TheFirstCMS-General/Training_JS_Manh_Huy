@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "fee_id": 1000,
+        "deadline": "2024-09-02",
+        "amount": 1000000,
+        "deleted": 0
+    },
+    {
+        "id": 2,
+        "fee_id": 3,
+        "amount": 100000,
+        "deadline": "2024-09-07",
+        "deleted": 0
+    },
+    {
+        "id": 3,
+        "fee_id": 3,
+        "amount": 1000000,
+        "deadline": "2024-09-05",
+        "deleted": 0
+    },
+    {
+        "id": 4,
+        "fee_id": 3,
+        "amount": 1000000,
+        "deadline": "2024-09-05",
+        "deleted": 0
+    }
+]
